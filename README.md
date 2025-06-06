@@ -15,22 +15,22 @@ php -S localhost:8000 -t public
 ## API готов к использованию!
   ### Эндпоинты API:
     - Получение ленты постов:
-      ** GET /feed?user_id=123 **
+        ** GET /feed?user_id=123 **
         Параметры:
         user_id — обязательный, ID пользователя для фильтрации просмотренных постов
         Возвращает JSON с массивом постов, отсортированных по популярности.
     - Отметить пост как просмотренный:
         ** POST /viewed **
-       Content-Type: application/json
-       Тело запроса:
-       {
+        Content-Type: application/json
+        Тело запроса:
+        {
           "user_id": 123,
           "post_id": 456
         }
         Записывает просмотр пользователя и увеличивает счётчик просмотров поста.
 
   ### Структура проекта
-  post_feed_api/
+  `post_feed_api/
   ├── app/
   │   ├── Controllers/      # Контроллеры (обработка запросов)
   │   ├── Models/           # Модели (работа с БД)
@@ -40,5 +40,5 @@ php -S localhost:8000 -t public
   ├── public/
   │   └── index.php         # Точка входа для API
   ├── seed.php              # Скрипт создания и наполнения базы
-  └── database.sqlite       # Файл базы данных SQLite
+  └── database.sqlite       # Файл базы данных SQLite`
 
